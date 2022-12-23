@@ -7,6 +7,11 @@ Como integrar o Sentry à sua aplicação:
 
 ### FastAPI
 
+Adicione o Sentry ao arquivo de dependências padrão do projeto (procure sempre pela última versão):
+```python
+sentry_sdk==1.12.1
+```
+
 Crie um arquivo version.py no mesmo diretório de seu arquivo main:
 ```python
 from io import open
