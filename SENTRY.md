@@ -3,6 +3,15 @@
 Solicite um DSN para um dos administradores do Sentry. 
 - Apps em FASTAPI devem ser criados como aplicação em ASGI. Não há uma opção nativa para o framework.
 
+As notificações para o slack do projeto devem apontar para os canais:
+- `#sentry-warnings-v1` - Para alertar o pessoal relacionado aos projetos v1;
+- `#sentry-warnings-v2` - Para alertar o pessoal relacionado aos projetos v2.
+
+E ativar as tags:
+```sh
+environment,user,release,runtime,level
+```
+
 Como integrar o Sentry à sua aplicação:
 
 ### FastAPI
