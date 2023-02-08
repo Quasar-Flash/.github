@@ -33,6 +33,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - [QISSO-3](https://link.jira) Corrige uma coisa bem legal por @jhonnymunis #3
 ```
+
 - `Added` - tag destinada à inclusão de novas funcionalides;
 - `Changed` - tag destinada a refatorações e atualizações;
 - `Fixed` - tag destinada a correções e hotfixes;
@@ -40,7 +41,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - É importante que todos as PR's mergeadas em dev sejam documentadas nessa nova entrada do changelog.
 - É importante que a branch `master` nunca esteja a frente da branch `dev`, e a documentação seja feita através de commit na dev;
 - É importante que contenha os IDs do Jira referentes às issues mergeadas para a entrega para rápido tracking;
-- O arquivo `.version` deve ser incluído para dentro do container para posteriormente ser usado em programas python/ruby/etc;
+- O arquivo `.version` deve ser incluído para dentro do container para posteriormente ser usado em programas python/ruby/etc - Ele deve ser incluído no ROOT do projeto para ser usado pelo workflow de deployment;
 - O workflow de deployment e release segue o padrão:
 
 ```yml
@@ -65,3 +66,7 @@ jobs:
 ## Commits
 
 Padrões de commits ~ainda~ não são exigências, porém, aconselhamos a seguir algo próximo da convenção o máximo possível. Você pode encontrar informações sobre isso no arquivo [COMMITTING.md](COMMITTING.md).
+
+## Tag ou Release?
+
+Uma release, por tabela, gera uma tag! A diferença entre eles é que nem sempre uma tag significa a entrega de uma versão estável. Uma tag pode ser um simples backup, uma versão de teste (rc), backup temporário, etc., enquanto a release é a entrega propriamente dita do código para o servidor. A última release DEVE sempre refletir o que está atualmente no servidor.
